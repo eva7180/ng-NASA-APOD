@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { APIkey } from './api-keys';
 // import { Observable } from 'rxjs/Observable';
 
 @Injectable({
@@ -10,6 +11,6 @@ export class ApodService {
   constructor(private http: HttpClient) { }
 
   getAPOD = () => {
-    return this.http.get('https://api.nasa.gov/planetary/apod?api_key=eNaykbtMaWbovl71dcInVBGQqEEJkoWbQsVAIb9o').toPromise()
+    return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}`).toPromise()
   }
 }
