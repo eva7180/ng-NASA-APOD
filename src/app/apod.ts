@@ -1,4 +1,4 @@
-export interface Potd {
+export interface IApod {
   "date": string,
   "explanation": string,
   "hdurl": string,

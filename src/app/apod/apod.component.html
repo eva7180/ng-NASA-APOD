@@ -1,0 +1,7 @@
+<h1> Click the button to view the NASA Astronomy Picture of the Day!</h1>
+
+<button (click)="getAPOD()">Show Me!</button>
+
+<div *ngIf="APIresponse">
+  <app-apod-result [displayApod]="APIresponse"></app-apod-result>
+</div>
