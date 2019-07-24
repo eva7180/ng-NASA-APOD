@@ -13,15 +13,15 @@ export class ApodComponent implements OnInit {
 
   constructor(private ApodService: ApodService) { }
 
+  ngOnInit() {
+  }
+
   getAPOD = () => {
     this.ApodService.getAPOD().then( (response) => {
       this.APIresponse = response;
     }, (error) => {
       alert("Error: " + error.statusText)
     });
-  }
-
-  ngOnInit() {
   }
 
 }

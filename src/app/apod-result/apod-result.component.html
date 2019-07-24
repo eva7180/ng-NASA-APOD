@@ -2,7 +2,7 @@
 <h2> {{ displayApod.title}} </h2>
 <h5> {{ displayApod.date }} </h5>
 <div>
-  <img [src]="displayApod.url" class="apod"/>
+  <a [href]="displayApod.hdurl"><img [src]="displayApod.url" class="apod"/></a>
   <p class="copyright"> &copy; {{ displayApod.copyright }} </p>
 </div>
 <p class="description"> {{ displayApod.explanation }} </p>
