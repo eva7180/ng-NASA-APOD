@@ -1,5 +1,8 @@
-<h3> {{ displayApod.title}} </h3>
+<br>
+<h2> {{ displayApod.title}} </h2>
 <h5> {{ displayApod.date }} </h5>
-<img [src]="displayApod.url" />
-<p> {{ displayApod.copyright }} </p>
-<p> {{ displayApod.explanation }} </p>
+<div>
+  <img [src]="displayApod.url" class="apod"/>
+  <p class="copyright"> &copy; {{ displayApod.copyright }} </p>
+</div>
+<p class="description"> {{ displayApod.explanation }} </p>

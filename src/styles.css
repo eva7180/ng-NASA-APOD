@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+h1 {
+  font-family: 'Russo One', sans-serif;
+}
+
+h2, h5, p, button {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.butn {
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  background: #e1ad01;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.butn:hover {
+  background: #fece30;
+  text-decoration: none;
+}
+
+.copyright {
+  font-size: 0.7em;
+  color: #e1ad01;
+}
+
+.description {
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.apod {
+  height: 500px;
+}
