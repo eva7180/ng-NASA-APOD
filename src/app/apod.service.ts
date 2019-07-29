@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class ApodService {
-  if (environment.envName === 'prod') {
+  if (production) {
     let APIkey = process.env.APIkey;
   };
 
