@@ -9,7 +9,7 @@ import { IApod } from '../apod';
   providers: [ ApodService ]
 })
 export class ApodComponent implements OnInit {
-  APIresponse;;
+  APIresponse;
 
   constructor(private ApodService: ApodService) { }
 
@@ -18,6 +18,15 @@ export class ApodComponent implements OnInit {
 
   getAPOD = () => {
     this.ApodService.getAPOD().then( (response) => {
+      this.APIresponse = response;
+    }, (error) => {
+      alert("Error: " + error.statusText)
+    });
+  }
+
+  prevDay = () => {
+    let previous = new Date(Date.parse(this.APIresponse.date) - 8.64e+7).toISOString().split('T')[0];
+    this.ApodService.getByDate(previous).then( (response) => {
       this.APIresponse = response;
     }, (error) => {
       alert("Error: " + error.statusText)

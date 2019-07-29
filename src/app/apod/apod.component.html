@@ -1,6 +1,10 @@
-<h1> Click the button to view the NASA Astronomy Picture of the Day!</h1>
-
-<button class="butn" (click)="getAPOD()">Show Me</button>
+<div *ngIf="!APIresponse; else response">
+  <h1> Click the button to view the NASA Astronomy Picture of the Day!</h1>
+  <button class="butn" (click)="getAPOD()">Show Me</button>
+</div>
+<ng-template #response>
+  <button class="butn" (click)="prevDay()">Show Previous Day</button>
+</ng-template>
 
 <div *ngIf="APIresponse">
   <app-apod-result [displayApod]="APIresponse"></app-apod-result>

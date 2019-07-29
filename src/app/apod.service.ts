@@ -13,4 +13,8 @@ export class ApodService {
   getAPOD = () => {
     return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}`).toPromise()
   }
+
+  getByDate = (datestring) => {
+    return this. http.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}&date=${datestring}`).toPromise()
+  }
 }
