@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { APIkey } from './api-keys';
 // import { Observable } from 'rxjs/Observable';
 import { environment } from '../environments/environment';
 
@@ -8,17 +7,15 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class ApodService {
-  if (production) {
-    let APIkey = process.env.APIkey;
-  };
+  APIkey: string = environment.APIkey
 
   constructor(private http: HttpClient) { }
 
   getAPOD = () => {
-    return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}`).toPromise()
+    return this.http.get(`https://api.nasa.gov/planetary/apod?api_key=${this.APIkey}`).toPromise()
   }
 
   getByDate = (datestring) => {
-    return this. http.get(`https://api.nasa.gov/planetary/apod?api_key=${APIkey}&date=${datestring}`).toPromise()
+    return this. http.get(`https://api.nasa.gov/planetary/apod?api_key=${this.APIkey}&date=${datestring}`).toPromise()
   }
 }
